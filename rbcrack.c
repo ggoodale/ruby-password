@@ -89,7 +89,7 @@ static VALUE passwd_check(VALUE self, VALUE args)
 }
 
 /* initialize this class */
-void Init_crack()
+void Init_cracklib()
 {
     VALUE cPassword;
 

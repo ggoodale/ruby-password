@@ -43,7 +43,7 @@ hfile.close
 
 have_header('crack.h') && have_library('crack', 'FascistCheck') or exit 1
 
-create_makefile('crack')
+create_makefile('cracklib')
 
 File.open('Makefile', 'a') do |f|
   f.print <<EOF
@@ -54,7 +54,7 @@ extra-clean:	distclean
 docs:
 		-rdoc -x CVS rbcrack.c lib
 
-test:		crack.so FORCE
+test:		cracklib.so FORCE
 		-cd test; ./tc_password.rb
 
 FORCE:
